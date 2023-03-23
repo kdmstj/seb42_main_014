@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 BUILD_JAR=$(ls /home/ubuntu/action/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
