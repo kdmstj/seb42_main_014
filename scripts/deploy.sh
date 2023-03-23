@@ -1,6 +1,5 @@
 #!/bin/bash
 
-source ~/.bash_profile
 
 BUILD_JAR=$(ls /home/ubuntu/action/server/volunteer/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
@@ -27,6 +26,7 @@ else
   sleep 5
 fi
 
+source ~/.bash_profile
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ubuntu/action/deploy.log
