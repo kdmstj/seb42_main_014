@@ -2,6 +2,8 @@
 BUILD_JAR=$(ls /home/ssm-user/action/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
+sudo chmod 777 /home/ssm-user/action/
+
 echo "> 현재 시간: $(date)" >> /home/ssm-user/action/deploy.log
 
 echo "> build 파일명: $JAR_NAME" >> /home/ssm-user/action/deploy.log
