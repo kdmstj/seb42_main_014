@@ -28,7 +28,7 @@ fi
 
 source ~/.bash_profile
 
-echo $datasource_url >> /home/ubuntu/action/deploy.log
+echo "datasource_url : $datasource_url" >> /home/ubuntu/action/deploy.log
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ubuntu/action/deploy.log
