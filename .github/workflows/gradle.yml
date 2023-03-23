@@ -35,6 +35,8 @@ jobs:
       run: cd ./server/volunteer
     - name : Check directory
       run: ls
+    - name: Move Directory
+      run: cd server/volunteer
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build clean with Gradle
