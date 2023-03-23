@@ -1,5 +1,5 @@
 #!/bin/bash
-BUILD_JAR=$(ls /home/ubuntu/action/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
+BUILD_JAR=$(ls /home/ubuntu/action/server/volunteer/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
 sudo chmod 777 /home/ubuntu/action/
