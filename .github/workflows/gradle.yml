@@ -31,6 +31,8 @@ jobs:
       with:
         java-version: '11'
         distribution: 'temurin'
+    - name : cd to gradlew
+      run: cd /server/volunteer/
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
