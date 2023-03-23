@@ -1,4 +1,15 @@
 #!/bin/bash
+
+source ~/.bashrc
+
+cd /home/ubuntu/action/server/volunteer/
+
+./gradlew clean
+
+./gradlew build -Pprofile=dev
+
+
+
 BUILD_JAR=$(ls /home/ubuntu/action/server/volunteer/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
 
@@ -24,13 +35,6 @@ else
   sleep 5
 fi
 
-cd /home/ubuntu/action/server/volunteer/
-
-./gradlew clean
-
-./gradlew build -Pprofile=dev
-
-source ~/.bashrc
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ubuntu/action/deploy.log
