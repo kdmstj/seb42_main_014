@@ -24,9 +24,17 @@ else
   sleep 5
 fi
 
+cd /home/ubuntu/action/server/volunteer/
+
+./gradlew clean
+
+./gradlew build -Pprofile=dev
 
 source ~/.bashrc
 
 DEPLOY_JAR=$DEPLOY_PATH$JAR_NAME
 echo "> DEPLOY_JAR 배포"    >> /home/ubuntu/action/deploy.log
-sudo nohup java -jar $DEPLOY_JAR >> /home/ubuntu/deploy.log 2>/home/ubuntu/action/deploy_err.log &
+
+cd build/libs/
+
+sudo nohup java -jar $DEPLOY_JAR & >> /home/ubuntu/deploy.log 2>/home/ubuntu/action/deploy_err.log &
