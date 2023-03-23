@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source ~/.bashrc
+source ~/.bash_profile
 
 BUILD_JAR=$(ls /home/ubuntu/action/server/volunteer/build/libs/volunteer-0.0.1-SNAPSHOT.jar)
 JAR_NAME=$(basename $BUILD_JAR)
