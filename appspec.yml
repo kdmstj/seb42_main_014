@@ -2,11 +2,11 @@ version: 0.0
 os: linux
 files:
   - source:  /
-    destination: /home/ssm-user/action
+    destination: /home/ubuntu/action
     overwrite: yes
 
 permissions:
-  - object: /home/ssm-user/action
+  - object: /home/ubuntu/action
     pattern: "**"
     owner: ssm-user
     group: ssm-user
