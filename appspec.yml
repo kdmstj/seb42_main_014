@@ -8,8 +8,8 @@ files:
 permissions:
   - object: /
     pattern: "**"
-    owner: ubuntu
-    group: ubuntu
+    owner: ssm-user
+    group: ssm-user
 
 hooks:
   ApplicationStart:
