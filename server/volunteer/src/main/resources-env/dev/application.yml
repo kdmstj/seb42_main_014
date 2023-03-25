@@ -1,6 +1,9 @@
 running: dev
 domain: http://3.35.252.234:8080
 
+awsParameterStorePropertySource:
+  enabled: true
+
 spring:
   profiles:
     include: common
@@ -73,5 +76,3 @@ cloud:
 mail:
   address:
     admin: admin@gmail.com
-awsParameterStorePropertySource:
-  enabled: true
