@@ -9,9 +9,9 @@ spring:
     include: common
     active: dev
   datasource:
-    url: ${datasource_url}
-    username: ${datasource_username}
-    password: ${datasource_password}
+    url: ${/spring-boot-aws/main014/spring.datasource.url}
+    username: ${/spring-boot-aws/main014/spring.datasource.username}
+    password: ${/spring-boot-aws/main014/spring.mail.password}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     database: mysql
@@ -24,7 +24,7 @@ spring:
       client:
         registration:
           kakao:
-            client-id: ${rest_api_key}
+            client-id: ${/spring-boot-aws/main014/spring.security.oauth2.client.registration.kakao.client-id}
             redirect-uri: "http://3.35.252.234:8080/login/oauth2/code/kakao"
             authorization-grant-type: authorization_code
             client-authentication-method: POST
@@ -42,8 +42,8 @@ spring:
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${gmail_username}
-    password: ${gmail_password}
+    username: ${/spring-boot-aws/main014/spring.mail.username}
+    password: ${/spring-boot-aws/main014/spring.mail.password}
     properties:
       mail:
         smtp:
@@ -59,14 +59,14 @@ logging:
     org.hibernate.SQL: trace
     org.hibernate.type.descriptor.sql.BasicBinder: trace
 jwt:
-  secret: ${secret_key}
+  secret: ${/spring-boot-aws/main014/jwt.secret}
   access-token-expiration-minutes: 1800000
   refresh-token-expiration-minutes: 604800000
 cloud:
   aws:
     credentials:
-      accessKey: ${aws_access_key_id}
-      secretKey: ${aws_secret_access_key}
+      accessKey: ${/spring-boot-aws/main014/cloud.aws.credentials.access-key}
+      secretKey: ${/spring-boot-aws/main014/cloud.aws.credentials.secret-key}
     s3:
       bucket: main014-bucket
     region:
