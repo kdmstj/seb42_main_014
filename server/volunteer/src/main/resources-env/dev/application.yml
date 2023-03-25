@@ -65,8 +65,8 @@ jwt:
 cloud:
   aws:
     credentials:
-      accessKey: ${aws_access_key_id}
-      secretKey: ${aws_secret_access_key}
+#       accessKey: ${aws_access_key_id}
+#       secretKey: ${aws_secret_access_key}
     s3:
       bucket: main014-bucket
     region:
